@@ -1,0 +1,27 @@
+paths:
+  /twilio/{phoneNumber}/check/{code}:
+    get:
+      tags:
+        - Twilio
+      description: check your code
+      produces:
+        - application/json
+      responses:
+        201:
+          description: A success message
+        400:
+          description: Missing parameters
+        401:
+          description: Unauthorized
+      parameters:
+        - name: phoneNumber
+          in: path
+          description: User phone number (eg :(countrycode)(number))
+          required: true
+          type: string
+        - name: code
+          in: path
+          description: code
+          required: true
+          type: string
+      

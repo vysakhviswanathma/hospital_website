@@ -1,0 +1,34 @@
+paths:
+  /user/signup:
+    post:
+      tags:
+        - User
+      description: Create a user
+      produces:
+        - application/json
+      responses:
+        201:
+          description: A success message
+        400:
+          description: Missing parameters
+      parameters:
+        - name: firstName
+          in: formData
+          description: User First Name
+          required: true
+          type: string
+        - name: lastName
+          in: formData
+          description: User Last Name
+          required: true
+          type: string
+        - name: email
+          in: formData
+          description: Email
+          required: true
+          type: string
+        - name: password
+          in: formData
+          required: true
+          description: Password
+          type: string

@@ -1,0 +1,21 @@
+paths:
+  /cron/stop/{job}:
+    get:
+      tags:
+        - cronJob
+      description: stop a cron job
+      produces:
+        - application/json
+      responses:
+        201:
+          description: A success message
+        400:
+          description: Missing parameters
+        401:
+          description: Unauthorized
+      parameters:
+        - name: job
+          in: path
+          description: job name
+          required: true
+          type: string

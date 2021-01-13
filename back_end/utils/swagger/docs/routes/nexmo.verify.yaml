@@ -1,0 +1,27 @@
+paths:
+  /nexmo/verify:
+    post:
+      tags:
+        - Nexmo
+      description: send sms to the specified number
+      produces:
+        - application/json
+      responses:
+        201:
+          description: A success message
+        400:
+          description: Missing parameters
+        401:
+          description: Unauthorized
+      parameters:
+        - name: phoneNumber
+          in: formData
+          description: User phone number (eg :(countrycode)(number))
+          required: true
+          type: string
+        - name: codeLength
+          in: formData
+          description: length of the code 
+          required: true
+          type: number
+      

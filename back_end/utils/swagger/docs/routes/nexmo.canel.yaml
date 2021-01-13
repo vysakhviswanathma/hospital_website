@@ -1,0 +1,23 @@
+paths:
+  /nexmo/cancel:
+    post:
+      tags:
+        - Nexmo
+      description: cancel your request
+      produces:
+        - application/json
+      responses:
+        201:
+          description: A success message
+        400:
+          description: Missing parameters
+        401:
+          description: Unauthorized
+      parameters:
+        - name: reqID
+          in: formData
+          description: request ID
+          required: true
+          type: string
+        
+      

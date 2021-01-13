@@ -1,0 +1,12 @@
+paths:
+    /user/signin:
+      get:
+        tags:
+          - User
+        description: Get OAurh Signin URI's
+        produces:
+          - application/json
+        responses:
+          200:
+            description: A success message
+  

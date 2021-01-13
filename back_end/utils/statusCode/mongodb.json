@@ -1,0 +1,6 @@
+{
+    "DUPLICATE_KEY_ERROR" : {
+            "code" : 11000,
+            "message" : "insertDocument :: caused by :: 11000 E11000 duplicate key error"
+    }
+}

@@ -1,0 +1,16 @@
+paths:
+  /cron/schedule:
+    get:
+      tags:
+        - cronJob
+      description: start a cron job
+      produces:
+        - application/json
+      responses:
+        201:
+          description: A success message
+        400:
+          description: Missing parameters
+        401:
+          description: Unauthorized
+     

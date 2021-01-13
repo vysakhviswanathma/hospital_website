@@ -1,0 +1,31 @@
+paths:
+  /email/{id}/confirm-verification/{token}:
+    get:
+      tags:
+        - Email
+      description: Email verification
+      produces:
+        - application/json
+      responses:
+        201:
+          description: A success message
+        400:
+          description: Missing parameters
+        401:
+            description: Unauthorized
+      parameters:
+        - in: path
+          name: id   # Note the name is the same as in the path
+          required: true
+          schema:
+            type: string
+            minimum: 10
+          description: The email token ID
+        - in: path
+          name: token   # Note the name is the same as in the path
+          required: true
+          schema:
+            type: string
+            minimum: 48
+          description: The email token
+        

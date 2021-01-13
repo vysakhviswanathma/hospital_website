@@ -1,0 +1,28 @@
+paths:
+  /user/code-verification:
+    post:
+      tags:
+        - User
+      description: Reset Password Code verification
+      produces:
+        - application/json
+      responses:
+        201:
+          description: A success message
+        400:
+          description: Missing parameters
+        401:
+            description: Unauthorized
+      parameters:
+        - name: email
+          in: formData
+          description: Email of the user
+          required: true
+          type: string
+        - name: code 
+          in: formData
+          required: true
+          schema:
+          type: string
+          description: reset password code
+        

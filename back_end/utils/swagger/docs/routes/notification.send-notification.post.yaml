@@ -1,0 +1,11 @@
+paths:
+  /push/send-notification:
+    post:
+      tags:
+        - Push
+      description: Send web push Notification. (Please Open BASE_URL/push/client in browser, before running this API).
+      produces:
+        - application/json
+      responses:
+        200:
+          description: A success message
